@@ -152,6 +152,77 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-第二章的数据库中的几个约束 20191014" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>第二章的数据库中的几个约束 2019/10/14<br>1.主键(primary)约束<br>数据类型不限，但此列必须唯一且非空</p>
+<p>唯一的标识主键的标志的记录</p>
+<p>可设置一个字段，也可设置短个字段</p>
+<p>2.设计字段为自动增长 auto_increment</p>
+<p>给主键产生一个唯一的值，能进行累加</p>
+<p>3.使用外键（foreign key）约束</p>
+<p>1)外键约束用来在两个表的数据之间建立链接，它可以是一列或者多列。一个表可以有一个或多个外键。</p>
+<p>2)外键对应的是参照完整性，一个表的外键可以为空值，若不为空值，则每一个外键的值必须等于另一个表中主键的某个值。</p>
+<p>3)外键是表的一个字段，不是本表的主键，但对应另一个表的主键。定义外键后，不允许删除另一个表中具有关联关系的行。</p>
+<p>4)外键的主要作用是保持数据的一致性、完整性。</p>
+<p>4.非空约束(not null):</p>
+<p>指定的字段不能为空，用法在后边加 not null</p>
+<p>在定义数据表的时候,默认情况下所有字段是允许为空值的,如果需要禁止字段为空,那么就需要在创建表的时候显示指定.</p>
+<p>指定一个字段不为空的方式就是在字段定义后加上 not null.</p>
+<p>非空约束不因对通过insert语句插入的数据起作用,而且对于使用update语句进行更新是也起作用.</p>
+<p>5.默认约束default </p>
+<p>在该数据没有值的情况下加一个默认值</p>
+<p>6.唯一约束</p>
+<p>该列所有的数据是唯一的，字段可以为空</p>
+<p>1)字段名+数据类型+uniqie</p>
+<p>它用于防止一个特定的列中两个记录具有一定的值,如果希望一个字段在表中的值是唯一的.那么就可以将唯一约束设置到这个字段上,设置方式就是在<br>字段定义后面加上unique,也可以在加上非空约束.</p>
+<p>唯一约束可以添加到多个字段当中,也就是一张表中可以存在多个唯一约束,但是这样的单字段约束只能约束’’字段A的值在表中不重复’’,’’字段B的值<br>在表中不重复’’,却不能约束字段A的值和字段B的值同时重复,复合唯一约束是建立在多个字段上的约束,被约束的字段不能同时重复,就是在表中复合</p>
+<p>唯一约束的两个字段,不能同时出现第二次.比如,一条数据是 (1,2),就不能再出现一条同时包含(1,2)的数据.</p>
+<p>语法:</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/10/18/第二章的数据库中的几个约束 20191014/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
