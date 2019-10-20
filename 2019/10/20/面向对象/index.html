@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Hexo</title>
+  <title>面向对象 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="面向对象类，对象，变量（1）所有的Java程序都已类class为组织单元；类由属性和方法两部分组成（2）先创建对象，再使用对象（3）成员变量：类中定义，自动定义初始值 局部变量类方法中定义（两变量同名，局部变量有更高的优先级） 构造方法构造方法是定义在java类中的一个用来初始化对象的方法，与类同名且没有返回值 public 构造方法名（）{} 其中构造方法名与类同名；当没有指定的构造方法时，系统">
+<meta property="og:type" content="article">
+<meta property="og:title" content="面向对象">
+<meta property="og:url" content="http://yoursite.com/2019/10/20/面向对象/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="面向对象类，对象，变量（1）所有的Java程序都已类class为组织单元；类由属性和方法两部分组成（2）先创建对象，再使用对象（3）成员变量：类中定义，自动定义初始值 局部变量类方法中定义（两变量同名，局部变量有更高的优先级） 构造方法构造方法是定义在java类中的一个用来初始化对象的方法，与类同名且没有返回值 public 构造方法名（）{} 其中构造方法名与类同名；当没有指定的构造方法时，系统">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-10-20T02:55:21.673Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="面向对象">
+<meta name="twitter:description" content="面向对象类，对象，变量（1）所有的Java程序都已类class为组织单元；类由属性和方法两部分组成（2）先创建对象，再使用对象（3）成员变量：类中定义，自动定义初始值 局部变量类方法中定义（两变量同名，局部变量有更高的优先级） 构造方法构造方法是定义在java类中的一个用来初始化对象的方法，与类同名且没有返回值 public 构造方法名（）{} 其中构造方法名与类同名；当没有指定的构造方法时，系统">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -150,97 +154,166 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-面向对象" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      面向对象
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/20/面向对象/" class="archive-article-date">
+
+        
+        <a href="/2019/10/20/面向对象/" class="archive-article-date">
   	<time datetime="2019-10-20T02:52:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-20</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/20/面向对象/">面向对象</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h1><h2 id="类，对象，变量"><a href="#类，对象，变量" class="headerlink" title="类，对象，变量"></a>类，对象，变量</h2><p>（1）所有的Java程序都已类class为组织单元；类由属性和方法两部分组成<br>（2）先创建对象，再使用对象<br>（3）成员变量：类中定义，自动定义初始值</p>
+<h3 id="局部变量"><a href="#局部变量" class="headerlink" title="局部变量"></a>局部变量</h3><p>类方法中定义（两变量同名，局部变量有更高的优先级）</p>
+<h3 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h3><p>构造方法是定义在java类中的一个用来初始化对象的方法，与类同名且没有返回值</p>
+<h3 id="public-构造方法名（）"><a href="#public-构造方法名（）" class="headerlink" title="public 构造方法名（）{"></a>public 构造方法名（）{</h3><p>}</p>
+<p>其中构造方法名与类同名；当没有指定的构造方法时，系统会自动添加无参构造方法</p>
+<h2 id="Static使用"><a href="#Static使用" class="headerlink" title="Static使用"></a>Static使用</h2><p>Static修饰的成员属于整个类，被类的所有对象共享。可通过使用类名直接访问静态成员，也可通过对象名<br>Static可以修饰变量、方法和代码块</p>
+<h6 id="（1）Static使用之静态方法"><a href="#（1）Static使用之静态方法" class="headerlink" title="（1）Static使用之静态方法"></a><em>（1）Static使用之静态方法</em></h6><p><code>public class Helloworld {</code><br><code>public static void print() {</code><br><code>System.out.println(“***”);</code><br><code>}</code><br><code>public static void main(String[] args) {</code><br>    <code>Helloworld.print();</code><br>    <code>Helloworld demo = new Helloworld;</code><br>    <code>demo.print();</code><br><code>}</code><br>}</p>
+<p><strong>注意</strong>：静态方法中可以直接调用同类的静态成员，但不可以直接调用非静态成员；普通成员方法中可以直接访问同类的非静态变量和静态变量；静态方法中不能直接调用非静态成员方法</p>
+<h6 id="（2）Static使用之静态初始化块"><a href="#（2）Static使用之静态初始化块" class="headerlink" title="（2）Static使用之静态初始化块"></a><em>（2）Static使用之静态初始化块</em></h6><p>静态初始化块在类加载时执行，且只会执行一次，同时静态初始化块只能给静态变量赋值，不能初始化普通成员</p>
+<p><code>public class Helloworld {</code><br><code>int num1;</code><br><code>int num2;</code><br><code>static int num3;</code><br><code>public Helloworld() {</code><br>    <code>num1 = 91;</code><br>    <code>System.out.println(&quot;构造方法为num1赋值&quot;);</code><br>    <code>num2 = 74;</code><br>    <code>System.out.println(&quot;初始化块为num2赋值&quot;);</code><br>    <code>num3 = 83;</code><br>    <code>System.out.println(&quot;静态初始化块为num3赋值&quot;);</code><br><code>}</code></p>
+<p><code>public static void main(String[] args) {</code><br>    <code>Helloworld hello = new Helloworld();</code><br>    <code>System.out.println(hello.num1);</code><br>    <code>System.out.println(hello.num2);</code><br>    <code>System.out.println(num3);</code><br>    <code>Helloworld hello2 = new Helloworld();</code><br><code>}</code><br><code>}</code></p>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/20/面向对象/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/18/第二章的数据库中的几个约束 20191014/" class="archive-article-date">
-  	<time datetime="2019-10-18T01:30:03.469Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-18</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/11/hello-world/" class="archive-article-date">
-  	<time datetime="2019-10-11T01:09:11.159Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-11</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/11/hello-world/">Hello World</a>
-    </h1>
+  
+    <a href="/2019/10/18/第二章的数据库中的几个约束 20191014/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -263,8 +336,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
