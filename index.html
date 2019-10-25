@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:locale" content="en">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -33,7 +32,7 @@
   
 
 </head>
-</html>
+
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -55,7 +54,7 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/tags/随笔/">随笔</a></li>
+				<li><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
 	        
 			</ul>
 		</nav>
@@ -135,7 +134,7 @@
 				
 					<li style="width: 50%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/tags/随笔/">随笔</a></li>
+					<li style="width: 50%"><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
 		        
 				</ul>
 			</nav>
@@ -152,150 +151,6 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-面向对象" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/20/面向对象/">面向对象</a>
-    </h1>
-  
-
-        
-        <a href="/2019/10/20/面向对象/" class="archive-article-date">
-  	<time datetime="2019-10-20T02:52:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h1><h2 id="类，对象，变量"><a href="#类，对象，变量" class="headerlink" title="类，对象，变量"></a>类，对象，变量</h2><p>（1）所有的Java程序都已类class为组织单元；类由属性和方法两部分组成<br>（2）先创建对象，再使用对象<br>（3）成员变量：类中定义，自动定义初始值</p>
-<h3 id="局部变量"><a href="#局部变量" class="headerlink" title="局部变量"></a>局部变量</h3><p>类方法中定义（两变量同名，局部变量有更高的优先级）</p>
-<h3 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h3><p>构造方法是定义在java类中的一个用来初始化对象的方法，与类同名且没有返回值</p>
-<h3 id="public-构造方法名（）"><a href="#public-构造方法名（）" class="headerlink" title="public 构造方法名（）{"></a>public 构造方法名（）{</h3><p>}</p>
-<p>其中构造方法名与类同名；当没有指定的构造方法时，系统会自动添加无参构造方法</p>
-<h2 id="Static使用"><a href="#Static使用" class="headerlink" title="Static使用"></a>Static使用</h2><p>Static修饰的成员属于整个类，被类的所有对象共享。可通过使用类名直接访问静态成员，也可通过对象名<br>Static可以修饰变量、方法和代码块</p>
-<h6 id="（1）Static使用之静态方法"><a href="#（1）Static使用之静态方法" class="headerlink" title="（1）Static使用之静态方法"></a><em>（1）Static使用之静态方法</em></h6><p><code>public class Helloworld {</code><br><code>public static void print() {</code><br><code>System.out.println(“***”);</code><br><code>}</code><br><code>public static void main(String[] args) {</code><br>    <code>Helloworld.print();</code><br>    <code>Helloworld demo = new Helloworld;</code><br>    <code>demo.print();</code><br><code>}</code><br>}</p>
-<p><strong>注意</strong>：静态方法中可以直接调用同类的静态成员，但不可以直接调用非静态成员；普通成员方法中可以直接访问同类的非静态变量和静态变量；静态方法中不能直接调用非静态成员方法</p>
-<h6 id="（2）Static使用之静态初始化块"><a href="#（2）Static使用之静态初始化块" class="headerlink" title="（2）Static使用之静态初始化块"></a><em>（2）Static使用之静态初始化块</em></h6><p>静态初始化块在类加载时执行，且只会执行一次，同时静态初始化块只能给静态变量赋值，不能初始化普通成员</p>
-<p><code>public class Helloworld {</code><br><code>int num1;</code><br><code>int num2;</code><br><code>static int num3;</code><br><code>public Helloworld() {</code><br>    <code>num1 = 91;</code><br>    <code>System.out.println(&quot;构造方法为num1赋值&quot;);</code><br>    <code>num2 = 74;</code><br>    <code>System.out.println(&quot;初始化块为num2赋值&quot;);</code><br>    <code>num3 = 83;</code><br>    <code>System.out.println(&quot;静态初始化块为num3赋值&quot;);</code><br><code>}</code></p>
-<p><code>public static void main(String[] args) {</code><br>    <code>Helloworld hello = new Helloworld();</code><br>    <code>System.out.println(hello.num1);</code><br>    <code>System.out.println(hello.num2);</code><br>    <code>System.out.println(num3);</code><br>    <code>Helloworld hello2 = new Helloworld();</code><br><code>}</code><br><code>}</code></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/20/面向对象/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-第二章的数据库中的几个约束 20191014" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>第二章的数据库中的几个约束 2019/10/14<br>1.主键(primary)约束<br>数据类型不限，但此列必须唯一且非空</p>
-<p>唯一的标识主键的标志的记录</p>
-<p>可设置一个字段，也可设置短个字段</p>
-<p>2.设计字段为自动增长 auto_increment</p>
-<p>给主键产生一个唯一的值，能进行累加</p>
-<p>3.使用外键（foreign key）约束</p>
-<p>1)外键约束用来在两个表的数据之间建立链接，它可以是一列或者多列。一个表可以有一个或多个外键。</p>
-<p>2)外键对应的是参照完整性，一个表的外键可以为空值，若不为空值，则每一个外键的值必须等于另一个表中主键的某个值。</p>
-<p>3)外键是表的一个字段，不是本表的主键，但对应另一个表的主键。定义外键后，不允许删除另一个表中具有关联关系的行。</p>
-<p>4)外键的主要作用是保持数据的一致性、完整性。</p>
-<p>4.非空约束(not null):</p>
-<p>指定的字段不能为空，用法在后边加 not null</p>
-<p>在定义数据表的时候,默认情况下所有字段是允许为空值的,如果需要禁止字段为空,那么就需要在创建表的时候显示指定.</p>
-<p>指定一个字段不为空的方式就是在字段定义后加上 not null.</p>
-<p>非空约束不因对通过insert语句插入的数据起作用,而且对于使用update语句进行更新是也起作用.</p>
-<p>5.默认约束default </p>
-<p>在该数据没有值的情况下加一个默认值</p>
-<p>6.唯一约束</p>
-<p>该列所有的数据是唯一的，字段可以为空</p>
-<p>1)字段名+数据类型+uniqie</p>
-<p>它用于防止一个特定的列中两个记录具有一定的值,如果希望一个字段在表中的值是唯一的.那么就可以将唯一约束设置到这个字段上,设置方式就是在<br>字段定义后面加上unique,也可以在加上非空约束.</p>
-<p>唯一约束可以添加到多个字段当中,也就是一张表中可以存在多个唯一约束,但是这样的单字段约束只能约束’’字段A的值在表中不重复’’,’’字段B的值<br>在表中不重复’’,却不能约束字段A的值和字段B的值同时重复,复合唯一约束是建立在多个字段上的约束,被约束的字段不能同时重复,就是在表中复合</p>
-<p>唯一约束的两个字段,不能同时出现第二次.比如,一条数据是 (1,2),就不能再出现一条同时包含(1,2)的数据.</p>
-<p>语法:</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/18/第二章的数据库中的几个约束 20191014/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -303,13 +158,13 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/11/hello-world/">Hello World</a>
+      <a class="article-title" href="/2019/10/25/hello-world/">Hello World</a>
     </h1>
   
 
         
-        <a href="/2019/10/11/hello-world/" class="archive-article-date">
-  	<time datetime="2019-10-11T01:09:11.159Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-11</time>
+        <a href="/2019/10/25/hello-world/" class="archive-article-date">
+  	<time datetime="2019-10-25T11:59:05.064Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-25</time>
 </a>
         
       </header>
@@ -341,7 +196,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/11/hello-world/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/10/25/hello-world/">展开全文 >></a>
         </p>
       
 
