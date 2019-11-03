@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="author" content="John Doe" />
+
+
+
+<meta name="description" content="java面向对象的特性1.封装性：将类的某些信息隐藏在内部，通过类的方法来实现操作访问步骤1 修改属性可见性；2 创建getter\setter方法；3在方法中加入属性控制语句(1)静态内部类: 12345678910111213141516171819202122232425public class SOuter &amp;#123;private int a = 99;static int b = 1">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java面向对象的特性">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%89%B9%E6%80%A7&#x2F;index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="java面向对象的特性1.封装性：将类的某些信息隐藏在内部，通过类的方法来实现操作访问步骤1 修改属性可见性；2 创建getter\setter方法；3在方法中加入属性控制语句(1)静态内部类: 12345678910111213141516171819202122232425public class SOuter &amp;#123;private int a = 99;static int b = 1">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-10-29T02:01:10.000Z">
+<meta name="twitter:card" content="summary">
+
+<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.png">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>java面向对象的特性 | Hexo</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: 
+    }
+</script>
+
+
+    <script> yiliaConfig.jquery_ui = [false]; </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/avatar.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">John Doe</a></h1>
+        </hgroup>
+
+        
+
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>Menu</li>
+                        <li>Tags</li>
+                        
+                        <li>Friends</li>
+                        
+                        
+                        <li>About Me</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="mailto:123@123.com" target="_blank" rel="noopener" title="Email"></a>
+                            
+                                <a class="fa GitHub" href="#" title="GitHub"></a>
+                            
+                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://hexo.io" target="_blank" rel="noopener">Hexo</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://pages.github.com/" target="_blank" rel="noopener">GitHub</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/" target="_blank" rel="noopener">MOxFIVE</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">专注于前端</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">John Doe</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/avatar.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">John Doe</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:123@123.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="#" title="GitHub"></a>
+                            
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
+</nav>
+      <div class="body-wrap"><article id="post-java面向对象的特性" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2019/11/03/java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%89%B9%E6%80%A7/" class="article-date">
+      <time datetime="2019-11-03T13:26:05.858Z" itemprop="datePublished">2019-11-03</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      java面向对象的特性
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="java面向对象的特性"><a href="#java面向对象的特性" class="headerlink" title="java面向对象的特性"></a><code>java</code>面向对象的特性</h1><h4 id="1-封装性：将类的某些信息隐藏在内部，通过类的方法来实现操作访问"><a href="#1-封装性：将类的某些信息隐藏在内部，通过类的方法来实现操作访问" class="headerlink" title="1.封装性：将类的某些信息隐藏在内部，通过类的方法来实现操作访问"></a>1.封装性：将类的某些信息隐藏在内部，通过类的方法来实现操作访问</h4><h5 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h5><p>1 修改属性可见性；<br>2 创建getter\setter方法；<br>3在方法中加入属性控制语句<br>(1)静态内部类:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SOuter</span> </span>&#123;<span class="keyword">private</span> <span class="keyword">int</span> a = <span class="number">99</span>;<span class="keyword">static</span> <span class="keyword">int</span> b = <span class="number">1</span>;<span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">SInner</span> </span>&#123;<span class="keyword">int</span> b = <span class="number">2</span>;`</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"访问外部类b"</span> + SOuter.b);</span><br><span class="line">        System.out.println(<span class="string">"访问内部类b"</span> + b);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">`<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;`</span><br><span class="line"></span><br><span class="line">    <span class="comment">//三行表示</span></span><br><span class="line">    SInner sInner;</span><br><span class="line">    sInner = <span class="keyword">new</span> SInner();</span><br><span class="line">    sInner.test();</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//两行表示</span></span><br><span class="line">    SInner si = <span class="keyword">new</span> SInner();</span><br><span class="line">    si.test();</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//一行表示</span></span><br><span class="line">    <span class="keyword">new</span> SInner().test();</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>(2)成员内部类：访问外部类时使用this指针<br>（3）方法内部类：只能在该方法中使用，且不能使用访问控制符和Static修饰符</p>
+<p>(2)成员内部类：访问外部类时使用this指针<br>（3）方法内部类：只能在该方法中使用，且不能使用访问控制符和Static修饰符</p>
+<h6 id="2-继承性"><a href="#2-继承性" class="headerlink" title="2. 继承性"></a>2. 继承性</h6><p>（1）一般形式：class 子类 extends 父类<br>（2）方法重写：子类对继承的父类方法不满意可以重写，调用时优先调用子类方法<br>（3）继承的初始化顺序：先初始化父类，再到子类；先执行初始化对象中属性，再执行狗在方法中的初始化<br>（4）父类对象–属性初始化–构造方法–子类对象–属性初始化–构造方法<br>（5）注意：如果子类构造方法中没有显示调用父类的构造方法，默认调用父类无参构造方法，若此父类没用无参的构造方法，则编译出错</p>
+<h6 id="3-多态性"><a href="#3-多态性" class="headerlink" title="3.多态性"></a>3.多态性</h6><p>引用多态：父类的引用可以指向本类的对象，也可指向子类的对象<br>方法多态：创建本类对象时，调用的方法为本类方法；创建子类对象时，调用的方法为子类的重写的方法或者继承的方法<br>（1）抽象类<br>用关键字abstract修饰：抽象类只用声明不需要实现；包含抽象方法的类为抽象类；抽象类不能直接创建，可以定义引用变量。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">Telphone</span></span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">call</span><span class="params">()</span></span>; <span class="comment">//抽象方法没有方法体，以分号结束</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>（2）接口（一种特殊的类，有全局变量和公共抽象方法组成）<br>[修饰符] class 类名 extends 父类<code>implemrnts</code> 接口1,2……<br>{类体部分<br>}<br>注：接口经常与匿名内部类配合使用</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Iplay</span></span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">phone</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">People</span> <span class="keyword">implements</span> <span class="title">Iplay</span></span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">People test=<span class="keyword">new</span> People();</span><br><span class="line">test.phone();</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">phone</span><span class="params">()</span></span>&#123;</span><br><span class="line">System.out.println(“手机可以玩游戏”);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>（2）接口（一种特殊的类，有全局变量和公共抽象方法组成）<br>[修饰符] class 类名 extends 父类<code>implemrnts</code> 接口1,2……<br>{类体部分<br>}<br>注：接口经常与匿名内部类配合使用</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Iplay</span></span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">phone</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">People</span> <span class="keyword">implements</span> <span class="title">Iplay</span></span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">People test=<span class="keyword">new</span> People();</span><br><span class="line">test.phone();</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">phone</span><span class="params">()</span></span>&#123;</span><br><span class="line">System.out.println(“手机可以玩游戏”);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="1-String、StringBuilder、StringBuffer的区别是什么，String为什么是不可变的？"><a href="#1-String、StringBuilder、StringBuffer的区别是什么，String为什么是不可变的？" class="headerlink" title="1.String、StringBuilder、StringBuffer的区别是什么，String为什么是不可变的？"></a>1.<code>String、StringBuilder、StringBuffer</code>的区别是什么，String为什么是不可变的？</h3><h4 id="不可变性"><a href="#不可变性" class="headerlink" title="不可变性"></a>不可变性</h4><p>String类的底层源码中，通过final关键字修饰字符串数组，private final char value[]，所以是不可变的。<code>StringBuffer</code>和<code>StringBuilder</code>类是集成自 <code>AbstractStringBuilder</code> 类， <code>AbstractStringBuilder</code> 类中的变量没有用final关键字修饰，所以是可变的。<br>线程安全性<br>String是不可变的，是常量，所以是线程安全的。<code>StringBuilder</code>和<code>StringBuffer</code>都继承自<code>AbstractStringBuilder</code> 类，<code>StringBuffer</code>对方法加了同步锁，所以是线程安全的，而<code>StringBuilder</code>没有加同步锁，所以是线程不安全的。<br>性能<br>对String类型进行改变是都会new一个新的string对象，并指向新的对象；<br><code>StringBuffer</code>直接通过改变自身变量的值，<code>StringBuilder</code>相对能提升性能，但有线程不安全的情况。</p>
+<h3 id="2-与-equals"><a href="#2-与-equals" class="headerlink" title="2.== 与 equals"></a><code>2.== 与 equals</code></h3><p><code>==用来判断两个对象是否相等，基础数据类型比较的是值是否相等。</code><br><code>没有重写对象的equals方法时，也是用来比较两个对象是否相等，重写equals方法可以比较内容相等，返回true</code></p>
+<h3 id="3-try-catch-finally中finally是否一定执行"><a href="#3-try-catch-finally中finally是否一定执行" class="headerlink" title="3.try/catch/finally中finally是否一定执行"></a><code>3.try/catch/finally中finally是否一定执行</code></h3><p><code>在以下4种特殊情况下，finally块不会被执行:</code><br><code>在finally语句块中发生了异常。</code><br><code>在前面的代码中用了System.exit()退出程序。</code><br><code>程序所在的线程死亡。</code><br><code>关闭CPU。</code></p>
+<h3 id="4-接口和抽象类的区别？"><a href="#4-接口和抽象类的区别？" class="headerlink" title="4.接口和抽象类的区别？"></a>4.接口和抽象类的区别？</h3><p>1.抽象类中可以实现方法，抽象接口不能实现方法（<code>jdk1.8</code>以后可以实现方法）；<br>2.接口中的变量默认是final类型，而抽象类不是；<br>3.类只能继承一个抽象类，而接口可以实现多个；<br>4.类继承接口需要实现所有方法，抽象类不需要；<br>5.接口不能用new实例化，可以声明。必须引用一个实现该接口的对象抽象是对类的抽象，是一种模板设计，接口是行为的抽象，是一种行为的规范。</p>
+<h3 id="5-Arraylist-与-LinkedList-异同"><a href="#5-Arraylist-与-LinkedList-异同" class="headerlink" title="5.Arraylist 与 LinkedList 异同"></a><code>5.Arraylist 与 LinkedList 异同</code></h3><h6 id="安全性"><a href="#安全性" class="headerlink" title="安全性"></a><strong>安全性</strong></h6><p><code>ArrayList与LinkedList都是线程不安全的。</code><br><strong>数据结构实现</strong><br><code>ArryayList是基于Object数组，而LinkedList是基于双向循环链表（JDK1.6之前为循环链表，之后取消了循环）</code><br><strong>插入删除的影响</strong><br><code>ArrayList采用数组存储，插入删除受元素位置的影响；</code><br><code>LinkedList采用链表存储，插入删除不收元素位置影响；</code><br><strong>访问元素</strong><br><code>LinkedList</code> 不支持高效的随机元素访问，而 ``ArrayList<code>支持。快速随机访问就是通过元素的序号快速获取元素对象(对应于get(int index)方法)。
+实现了</code>RandomAccess<code>接口的list，优先选择普通for循环 ，其次</code>foreach,<code>未实现</code>RandomAccess<code>接口的list， 优先选择iterator遍历(</code>foreach`遍历底层也是通过iterator实现的)，大size的数据，千万不要使用普通for循环</p>
+<h3 id="6-ArrayList-与-Vector-区别"><a href="#6-ArrayList-与-Vector-区别" class="headerlink" title="6.ArrayList 与 Vector 区别"></a><code>6.ArrayList 与 Vector 区别</code></h3><p><code>Vector中所有方法都是同步的，在多线程操作中，同步操作会耗费时间，而ArrayList是不需要同步的，在不需要考虑线程安全时可以使用。</code></p>
+<h3 id="7-HashMap的底层实现"><a href="#7-HashMap的底层实现" class="headerlink" title="7.HashMap的底层实现"></a><code>7.HashMap的底层实现</code></h3><p><code>待补充完善</code></p>
+<h3 id="8-HashSet-和-HashMap-区别"><a href="#8-HashSet-和-HashMap-区别" class="headerlink" title="8.HashSet 和 HashMap 区别"></a><code>8.HashSet 和 HashMap 区别</code></h3><p><code>HashMap</code>实现Map接口，用来存储键值对，调用put方法添加元素，使用Key计算<code>Hashcode</code>，而<code>HashSet</code>实现Set接口，用来存储对象，调用add方法添加对象，使用对象计算<code>hashcode</code>，根据equals方法判断对象相等，执行效率的话，<code>HashMap</code>优与<code>HashSet</code>。</p>
+<h3 id="9-ConcurrentHashMap-和-Hashtable-的区别"><a href="#9-ConcurrentHashMap-和-Hashtable-的区别" class="headerlink" title="9.ConcurrentHashMap 和 Hashtable 的区别"></a>9.<code>ConcurrentHashMap</code> 和 <code>Hashtable</code> 的区别</h3><p><code>ConcurrentHashMap</code> 和 <code>HashTable</code> 的区别主要体现在实现线程安全的方式上不同。<code>ConcurrentHashMap</code>使用的是分段锁，<code>HashTable</code>使用的是同一把锁，因而在多线程并发中效率很低。</p>
+<h3 id="10-多线程实现方式"><a href="#10-多线程实现方式" class="headerlink" title="10.多线程实现方式"></a>10.多线程实现方式</h3><p>1.继承Thread类，2.实现Runnable接口，3.基于线程池实现</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>Title:</span><a href="/2019/11/03/java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%89%B9%E6%80%A7/">java面向对象的特性</a></p>
+        <p><span>Author:</span><a href="/" title="Back to Homepage">John Doe</a></p>
+        <p><span>Created:</span>2019-11-03, 21:26:05</p>
+        <p><span>Updated:</span>2019-10-29, 10:01:10</p>
+        <p>
+            <span>Full URL:</span><a class="post-url" href="/2019/11/03/java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%89%B9%E6%80%A7/" title="java面向对象的特性">http://yoursite.com/2019/11/03/java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%89%B9%E6%80%A7/</a>
+            <span class="copy-path" data-clipboard-text="From http://yoursite.com/2019/11/03/java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%89%B9%E6%80%A7/　　By John Doe" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>License:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"CC BY-NC-SA 4.0"</a> Keep Link &amp; Author if Distribute.
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2019/11/03/%E8%84%9A%E6%9C%AC%E8%AF%AD%E8%A8%80%E7%9A%84%E4%BB%8B%E7%BB%8D/">
+                    脚本语言的介绍
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2019/11/03/java%E4%BB%8B%E7%BB%8D/">
+                    java介绍
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#java面向对象的特性"><span class="toc-number">1.</span> <span class="toc-text">java面向对象的特性</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-封装性：将类的某些信息隐藏在内部，通过类的方法来实现操作访问"><span class="toc-number">1.0.0.1.</span> <span class="toc-text">1.封装性：将类的某些信息隐藏在内部，通过类的方法来实现操作访问</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#步骤"><span class="toc-number">1.0.0.1.1.</span> <span class="toc-text">步骤</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#2-继承性"><span class="toc-number">1.0.0.1.1.1.</span> <span class="toc-text">2. 继承性</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#3-多态性"><span class="toc-number">1.0.0.1.1.2.</span> <span class="toc-text">3.多态性</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-String、StringBuilder、StringBuffer的区别是什么，String为什么是不可变的？"><span class="toc-number">1.0.1.</span> <span class="toc-text">1.String、StringBuilder、StringBuffer的区别是什么，String为什么是不可变的？</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#不可变性"><span class="toc-number">1.0.1.1.</span> <span class="toc-text">不可变性</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-与-equals"><span class="toc-number">1.0.2.</span> <span class="toc-text">2.== 与 equals</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-try-catch-finally中finally是否一定执行"><span class="toc-number">1.0.3.</span> <span class="toc-text">3.try/catch/finally中finally是否一定执行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-接口和抽象类的区别？"><span class="toc-number">1.0.4.</span> <span class="toc-text">4.接口和抽象类的区别？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-Arraylist-与-LinkedList-异同"><span class="toc-number">1.0.5.</span> <span class="toc-text">5.Arraylist 与 LinkedList 异同</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#安全性"><span class="toc-number">1.0.5.0.0.1.</span> <span class="toc-text">安全性</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-ArrayList-与-Vector-区别"><span class="toc-number">1.0.6.</span> <span class="toc-text">6.ArrayList 与 Vector 区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-HashMap的底层实现"><span class="toc-number">1.0.7.</span> <span class="toc-text">7.HashMap的底层实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-HashSet-和-HashMap-区别"><span class="toc-number">1.0.8.</span> <span class="toc-text">8.HashSet 和 HashMap 区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-ConcurrentHashMap-和-Hashtable-的区别"><span class="toc-number">1.0.9.</span> <span class="toc-text">9.ConcurrentHashMap 和 Hashtable 的区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-多线程实现方式"><span class="toc-number">1.0.10.</span> <span class="toc-text">10.多线程实现方式</span></a></li></ol></li></ol></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="Hide"  title="Show or Hide Table of Contents">
+
+    <script>
+        yiliaConfig.toc = ["Hide", "Show", !!"false"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"java面向对象的特性　| Hexo　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2019/11/03/%E8%84%9A%E6%9C%AC%E8%AF%AD%E8%A8%80%E7%9A%84%E4%BB%8B%E7%BB%8D/" title="Pre: 脚本语言的介绍">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2019/11/03/java%E4%BB%8B%E7%BB%8D/" title="Next: java介绍">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/11/03/web%E5%89%8D%E7%AB%AF%E5%B8%B8%E7%94%A8%E7%9A%84%E4%B8%89%E5%A4%A7%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/">web前端常用的三大主流框架</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/11/03/ajax%E8%AF%B7%E6%B1%82%E7%9A%84%E4%BA%94%E4%B8%AA%E6%AD%A5%E9%AA%A4/">ajax请求的五个步骤</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/11/03/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">面向对象</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/11/03/%E8%84%9A%E6%9C%AC%E8%AF%AD%E8%A8%80%E7%9A%84%E4%BB%8B%E7%BB%8D/">脚本语言的介绍</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/11/03/java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%89%B9%E6%80%A7/">java面向对象的特性</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/11/03/java%E4%BB%8B%E7%BB%8D/">java介绍</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/25/hello-world/">Hello World</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2016-2019 John Doe
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="A fast, simple &amp; powerful blog framework">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="Another simple and elegant theme for Hexo  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" title="Site Visitors"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit"  title="Page Hits"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="Back to Top"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="Comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="Go to Bottom"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>
